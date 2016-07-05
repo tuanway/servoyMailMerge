@@ -1,6 +1,6 @@
 # servoyMailMerge
 
-Small utility for use with mail merges in Servoy Smart Client.
+Small utility for use with mail merges in a Servoy Smart Client solution.
 This was created using Apache POI and it is required for working functionality.
 
 # Import solution

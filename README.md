@@ -10,11 +10,11 @@ To test funcionality import 'dotxandoftToHTML.servoy' solution.
 #Usage
 The convert function takes in one parameter, an object textToMerge.
 It might look something like this:
-
+```json
 var textToMerge = {
 	 '«FULLNAME»': 'Tuan Nguyen',
      '«TITLE»': 'Software Developer',
      '«COMPANYML»': 'Servoy',
 }
-
-it will look for any mail merge fields in a DOTX/OFT file and replace them with the chosen value.
+'''
+The utility will look for any mail merge fields in a DOTX/OFT file and replace them with the chosen value.

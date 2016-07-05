@@ -100,10 +100,20 @@ function convert(event, textToMerge) {
         //if file is OFT - parse using HSMF.
         var msg = new Packages.org.apache.poi.hsmf.MAPIMessage(g);
         var output = msg.getHtmlBody()
-
         //merge text
         for (var x in textToMerge) {
             output = output.replace(x, textToMerge[x])
+        }
+
+        //get embedded images
+        var images = msg.getAttachmentFiles()
+        //create image files from chunk and replace references in output
+        for (var i = 0; i < images.length; i++) {
+            var tempImg = plugins.file.createFile(images[i].attachFileName);
+            tempImg.setBytes(images[i].attachData.getValue(), true)
+            var embedString = images[i].getChunks()[4];
+            //replace image SRC in output
+            output = output.replace('src="cid:' + embedString, 'src="' + images[i].attachFileName)
         }
 
         if (open) {
@@ -112,7 +122,6 @@ function convert(event, textToMerge) {
             var temp = plugins.file.createFile('temp.html');
             temp.setBytes(arr.getBytes(), true)
             plugins.file.openFile(temp);
-
         }
 
         return output;

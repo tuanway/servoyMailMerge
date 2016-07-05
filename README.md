@@ -24,4 +24,4 @@ The utility will look for any mail merge fields in selected file and replace the
 There is rudimentary support for images in this build.  Has been tested only with the DOTX format. 
 
 #Filetypes
-Currently this tool only supports DOTX(word template) && OFT (outlook templates).
+Currently this tool only supports .dotx (word template) && .oft (outlook templates).

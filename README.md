@@ -1,10 +1,10 @@
 # servoyMailMerge
 
-Small utility for use with mail merges in Servoy Smart Client
-Apache POI is required and is included in the 'POI' folder. 
+Small utility for use with mail merges in Servoy Smart Client.
+This was created using Apache POI and it is required for working functionality.
 
 # Import solution
-Move POI folder to the Servoy developer's plugins directory prior to usage.
+Move the included POI folder to the Servoy developer's plugins directory prior to usage.
 To test funcionality import 'dotxandoftToHTML.servoy' solution.
 
 #Usage
@@ -24,4 +24,4 @@ The utility will look for any mail merge fields in selected file and replace the
 There is rudimentary support for images in this build.  Has been tested only with the DOTX format. 
 
 #Filetypes
-Currently this tool only supports .dotx (word template) && .oft (outlook templates).
+Currently this tool only supports .dotx (Microsoft Word Template) && .oft (Outlook File Template).

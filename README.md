@@ -1,4 +1,4 @@
-# servoy_mail_merge
+# servoyMailMerge
 
 Small utility for use with mail merges in Servoy Smart Client
 Apache POI is required and is included in the 'POI' folder. 

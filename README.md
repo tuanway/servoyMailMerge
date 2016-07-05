@@ -8,7 +8,7 @@ Move POI folder to the Servoy developer's plugins directory prior to usage.
 To test funcionality import 'dotxandoftToHTML.servoy' solution.
 
 #Usage
-The convert function takes in one parameter, an object textToMerge.
+The convert function takes in a pararmeter textToMerge.
 It might look something like this:
 ```json
 var textToMerge = {

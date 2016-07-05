@@ -10,7 +10,7 @@ To test funcionality import 'dotxandoftToHTML.servoy' solution.
 #Usage
 The convert function takes in a pararmeter textToMerge.
 It might look something like this:
-```json
+```javascript
 var textToMerge = {
 	 '«FULLNAME»': 'Tuan Nguyen',
      '«TITLE»': 'Software Developer',

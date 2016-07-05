@@ -17,4 +17,11 @@ var textToMerge = {
      '«COMPANYML»': 'Servoy',
 }
 ```
-The utility will look for any mail merge fields in a DOTX/OFT file and replace them with the chosen value.
+
+The utility will look for any mail merge fields in selected file and replace them with the chosen value.  User has the option to return just the string or open as an html file.
+
+#Images
+There is rudimentary support for images in this build.  Has been tested only with the DOTX format. 
+
+#Filetypes
+Currently this tool only supports DOTX(word template) && OFT (outlook templates).

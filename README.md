@@ -14,7 +14,7 @@ It might look something like this:
 var textToMerge = {
 	 '«FULLNAME»': 'Tuan Nguyen',
      '«TITLE»': 'Software Developer',
-     '«COMPANYML»': 'Servoy',
+     '«COMPANY»': 'Servoy'
 }
 ```
 

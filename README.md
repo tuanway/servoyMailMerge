@@ -16,5 +16,5 @@ var textToMerge = {
      '«TITLE»': 'Software Developer',
      '«COMPANYML»': 'Servoy',
 }
-'''
+```
 The utility will look for any mail merge fields in a DOTX/OFT file and replace them with the chosen value.

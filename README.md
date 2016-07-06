@@ -1,15 +1,14 @@
 # servoyMailMerge
 
-Small utility for use with mail merges in a Servoy Smart Client solution.
-This was created using Apache POI and it is required for working functionality.
+small Servoy smart client solution which allows one to repeatedly replace markers in a Microsoft Word Template or Outlook File Template.  It was created using the Apache POI library.
 
-# Import solution
-Move the included POI folder to the Servoy developer's plugins directory prior to usage.
-To test funcionality import 'dotxandoftToHTML.servoy' solution.
+# How to install
+Move the included POI folder to the Servoy developer's plugins directory prior to usage (Apache POI libraries are required). Then import the dotxandoftToHTML.servoy solution within the Servoy IDE.
 
 #Usage
-The convert function takes in a pararmeter textToMerge.
-It might look something like this:
+To start the utility, execute the convert function.
+The function takes in a pararmeter textToMerge. 
+Which might look something like this:
 ```javascript
 var textToMerge = {
 	 '«FULLNAME»': 'Tuan Nguyen',
@@ -17,11 +16,10 @@ var textToMerge = {
      '«COMPANY»': 'Servoy'
 }
 ```
+By default once convert has finished execution the file will be opened in the default browser for a quick view.
 
-The utility will look for any mail merge fields in selected file and replace them with the chosen value.  User also has the option to open the html file in a browser for quick view.
-
-#Images
-There is rudimentary support for images in this build.
+#Image support
+There is rudimentary support for images in this build. 
 
 #Filetypes
-Currently this tool only supports .dotx (Microsoft Word Template) && .oft (Outlook File Template).
+At this time it only supports .dotx (Microsoft Word Template) && .oft (Outlook File Template).

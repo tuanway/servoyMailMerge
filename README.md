@@ -1,23 +1,28 @@
 # servoyMailMerge
 
-Small utility built using Servoy which allows one to repeatedly replace markers in a Microsoft Word Template or Outlook File Template.
+Small utility built using Servoy which allows one to repeatedly replace markers in a Microsoft Word Template or Outlook File Template and convert the content into HTML for use with emails.
 
 # How to install
 Apache POI libraries are used to parse the documents and are required.
-Move the included POI folder to the Servoy developer's plugins directory prior to usage. Then import the dotxandoftToHTML.servoy solution within the Servoy IDE.
+Move the included POI folder to the Servoy developer's plugins directory prior to usage. Then import the mailMerge.servoy solution within the Servoy IDE.
 
 #Usage
-To start the utility, execute the convert function.
-The function takes in a pararmeter textToMerge. 
-Which might look something like this:
+If using the solution provided, click the 'select file' button to start the utility.  There is also an option to display converted html content in a browser post execution which is on by default.
+
+The convert function is where most of the logic takes place.  Pass a pararmeter textToMerge with the desired markers to replace.
+It might look something like this:
 ```javascript
 var textToMerge = {
 	 '«FULLNAME»': 'Tuan Nguyen',
      '«TITLE»': 'Software Developer',
      '«COMPANY»': 'Servoy'
 }
+
+convert(event,textToMerge,true);
+
 ```
-By default once convert has finished execution the file will be opened in the default browser for a quick view.
+Calling the convert command above with those settings - will replace all markers in the textToMerge object that is found in the selected document and open the converted content in a browser after execution.
+
 
 #Image support
 There is rudimentary support for images in this build. 

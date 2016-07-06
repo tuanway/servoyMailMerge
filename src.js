@@ -1,19 +1,33 @@
 /**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"8F37C8AB-1091-4A80-8EDF-274524D1D7E2",variableType:4}
+ */
+var openBrowser = 1;
+
+/**
+ * @param {JSEvent} event
+ * @properties={typeid:24,uuid:"EBA892C6-968A-4EC7-9540-30E69F561BBE"}
+ */
+function executeProgram(event) {
+    var textToMerge = {
+        '«FULLNAME»': 'Tuan Nguyen',
+        '«TITLE»': 'Software Developer',
+        '«COMPANYML»': 'Servoy',
+        '&laquo;fullname&raquo;': 'Tuan Nguyen'
+    }
+    var output = convert(event, textToMerge, openBrowser == 1 ? true : false)
+    application.output(output, LOGGINGLEVEL.INFO)
+}
+
+/**
  * Open DOTX || OFT files and convert to HTML
  * @param {JSEvent} event
  * @param {Object} textToMerge Object containing values for mail merge replacement
+ * @param {Boolean} openInBrowser Option to open converted file in a browser
  * @properties={typeid:24,uuid:"14168D03-8E8A-4EE3-A667-8DE4149FF53C"}
  */
-function convert(event, textToMerge) {
-    //create some test merge fields
-    if (textToMerge == null) {
-        textToMerge = {
-            '«FULLNAME»': 'Tuan Nguyen',
-            '«TITLE»': 'Software Developer',
-            '«COMPANYML»': 'Servoy',
-            '&laquo;fullname&raquo;': 'Tuan Nguyen'
-        }
-    }
+function convert(event, textToMerge, openInBrowser) {
 
     /**
      * Convert DOTX format to HTML using Apache POI
@@ -137,8 +151,8 @@ function convert(event, textToMerge) {
     var g = new Packages.java.io.FileInputStream(f);
 
     if (f.getName().indexOf('.dotx') != -1) {
-        return dotxToHTML(true);
+        return dotxToHTML(openInBrowser);
     } else {
-        return oftToHTML(true);
+        return oftToHTML(openInBrowser);
     }
 }

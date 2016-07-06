@@ -4,7 +4,7 @@ Small utility built using Servoy which allows one to repeatedly replace markers 
 
 # How to install
 Apache POI libraries are used to parse the documents and are required.
-Move the included POI folder to the Servoy developer's plugins directory prior to usage. Then import the mailMerge.servoy solution within the Servoy IDE.
+Move the included lib folder to the Servoy developer's plugins directory prior to usage. Then import the mailMerge.servoy solution within the Servoy IDE.
 
 #Usage
 If using the solution provided, click the 'select file' button to start the utility.  There is also an option to display converted html content in a browser post execution which is on by default.

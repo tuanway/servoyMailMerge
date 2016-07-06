@@ -1,9 +1,10 @@
 # servoyMailMerge
 
-small Servoy smart client solution which allows one to repeatedly replace markers in a Microsoft Word Template or Outlook File Template.  It was created using the Apache POI library.
+Small utility built using Servoy which allows one to repeatedly replace markers in a Microsoft Word Template or Outlook File Template.
 
 # How to install
-Move the included POI folder to the Servoy developer's plugins directory prior to usage (Apache POI libraries are required). Then import the dotxandoftToHTML.servoy solution within the Servoy IDE.
+Apache POI libraries are used to parse the documents and are required.
+Move the included POI folder to the Servoy developer's plugins directory prior to usage. Then import the dotxandoftToHTML.servoy solution within the Servoy IDE.
 
 #Usage
 To start the utility, execute the convert function.

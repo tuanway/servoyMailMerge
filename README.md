@@ -21,7 +21,7 @@ var textToMerge = {
 convert(event,textToMerge,true);
 
 ```
-Calling the convert command above with those settings - will replace all markers in the textToMerge object that is found in the selected document and open the converted content in a browser after execution.
+Calling the convert command above will replace all markers in a selected document with those found in the textToMerge object and open the converted content in a browser after execution.
 
 
 #Image support

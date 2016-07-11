@@ -1,10 +1,14 @@
-# servoyMailMerge
+#servoyMailMerge
 
 Small utility built using Servoy which allows one to repeatedly replace markers in a Microsoft Word Template or Outlook File Template and convert the content into HTML for use with emails.
 
-# How to install
+#How to install
 Apache POI libraries are used to parse the documents and are required.
-Move the included lib folder to the Servoy developer's plugins directory prior to usage. Then import the mailMerge.servoy solution within the Servoy IDE.
+Add the neccessary libraries to the servoy classpath, then import the mailMerge.servoy solution within the Servoy IDE.
+
+#Apache POI
+Current releases can be found [here](http://archive.apache.org/dist/poi/release/bin/).
+The lib folder also contains the version used in this build.
 
 #Usage
 If using the solution provided, click the 'select file' button to start the utility.  There is also an option to display converted html content in a browser post execution which is on by default.
